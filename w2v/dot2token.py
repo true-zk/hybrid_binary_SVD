@@ -2,6 +2,7 @@ import os
 import re
 import pydot
 
+
 def loadfile(dotfile_dir_path):
     for root, dirs, files in os.walk(dotfile_dir_path):
         for dotfile in files:
@@ -12,6 +13,7 @@ def loadfile(dotfile_dir_path):
                     yield dotfile
                 except Exception as e:
                     print(e)
+
 
 def tokengen(node0):
     replace_dict = {
@@ -38,6 +40,7 @@ def tokengen(node0):
             sentences.append(word)
     return sentences
 
+
 def output(token_list0):
     path_out = r'D:\Desktop\hybrid-SVD\w2v\token_out'
     if not os.path.exists(path_out):
@@ -46,6 +49,7 @@ def output(token_list0):
     for token in token_list0:
         f.write(token + '\n')
     f.close()
+
 
 def dot2token(path):
     for file in loadfile(path):

@@ -41,7 +41,6 @@ def dot2data(dot, cwe, label):
     for node in nodes:
         if "label" not in node.obj_dict["attributes"]:
             index = nodes.index(node)
-            print(f"\rdel === {index}")
             for edge in edges:
                 src = edge.get_source().split(":")[0]
                 dst = edge.get_destination()
