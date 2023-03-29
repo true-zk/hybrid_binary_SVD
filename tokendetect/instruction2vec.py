@@ -2,7 +2,9 @@ import os
 import re
 import numpy as np
 from util import replace_code
-from gensim_w2v_model import Vecsize
+
+
+Vecsize = 5
 
 
 def instruction2vec_(instruction, model):

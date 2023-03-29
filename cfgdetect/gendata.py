@@ -115,17 +115,17 @@ def load_dot(path_dot_dir):
             continue
 
 
+# path: str : input path
+# labels: list : os
 def gendata(path):
     dataset = []
-    # k = 0
+
     for f, cwe, label in load_dot(path):
         dot = pydot.graph_from_dot_file(f)
         data = dot2data(dot, cwe, label)
         if data != -1:
             dataset.append(data)
-        # k += 1
-        # if k == 1:
-        #     break
+
     return dataset
 
 

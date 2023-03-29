@@ -33,12 +33,12 @@ def decompile_(decompiler, path_in, path_out, flag: str, cwe: str):
 
 
 def decompile(decompiler, path_in, path_out, cwe):
-    decompile_(decompiler, path_in, path_out, 'good', cwe)
+    # decompile_(decompiler, path_in, path_out, 'good', cwe)
     decompile_(decompiler, path_in, path_out, 'bad', cwe)
 
 
 if __name__ == '__main__':
-    CWE = 401
+    CWE = 127  # the only para to change
     CWE = 'CWE' + str(CWE)
     path_retdec = r"D:\Develop\retdec\bin\retdec-decompiler.py"
     path_CWE_xxx = r"D:\Desktop\hybrid-SVD\datasrc" + '\\' + CWE
